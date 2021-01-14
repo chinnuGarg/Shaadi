@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--margins-->
+    <dimen name="margin_xxxsmall">1dp</dimen>
+    <dimen name="margin_xxsmall">3dp</dimen>
+    <dimen name="margin_xsmall">5dp</dimen>
+    <dimen name="margin_med">7dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_xlarge">30dp</dimen>
+    <dimen name="margin_xxlarge">40dp</dimen>
+    <dimen name="margin_xxxlarge">80dp</dimen>
+
+    <!--padding-->
+    <dimen name="padding_xsmall">2dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_large">15dp</dimen>
+    <dimen name="padding_xlarge">20dp</dimen>
+    <dimen name="padding_xxlarge">30dp</dimen>
+    <dimen name="padding_xxxlarge">40dp</dimen>
+    <dimen name="recyclerview_item_offset">5dp</dimen>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ViewWrapContent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/ViewMatchParent"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_profile"
+            style="@style/ViewMatchParent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:padding="12dp" />
+
+        <RelativeLayout
+            style="@style/ViewWrapContent"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_left_container"
+                style="@style/ViewWrapContent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    style="@style/TextViewStyle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_gender"
+                    style="@style/TextViewStyle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_profile_status"
+                    style="@style/TextViewStyle" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_right_container"
+                style="@style/ViewWrapContent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_medium"
+
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_age"
+                    style="@style/TextViewStyle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_city"
+                    style="@style/TextViewStyle" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_button_container"
+                style="@style/ViewSection"
+                android:layout_below="@+id/ll_left_container"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_xlarge"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/holo_green_dark"
+                    android:maxLines="1"
+                    android:text="@string/like"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/holo_red_dark"
+                    android:maxLines="1"
+                    android:text="@string/dislike"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ViewSection">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_random_user"
+        style="@style/ViewSection"
+        android:layout_centerHorizontal="true"
+        android:divider="@null"
+        android:orientation="horizontal"
+        app:reverseLayout="false" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/ViewWrapContent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_left_arrow"
+        style="@style/ViewWrapContent.ArrowStyle"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ic_left_arrow" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_right_arrow"
+        style="@style/ViewWrapContent.ArrowStyle"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_right_arrow"
+        android:visibility="visible" />
+</RelativeLayout>
