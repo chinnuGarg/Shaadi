@@ -82,8 +82,8 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.MyVi
         wm.getDefaultDisplay().getSize(size);
         this.width = size.x;
         this.height = size.y;
-        //80% of screen width
-        itemWidth = (width * 80 / 100);
+        //100% of screen width
+        itemWidth = width;
     }
 
     @Override
@@ -110,20 +110,18 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.MyVi
         }
         Glide.with(context)
                 .load(randomUser.getProfileImage())
-                .apply(new RequestOptions().centerCrop()
+                .apply(new RequestOptions().centerCrop().error(R.drawable.user)
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .skipMemoryCache(true))
                 .into(holder.profileImage);
         //On click Listener for the dislike button
         holder.btnDislike.setOnClickListener(view -> {
             onProfileLikeDislikeInterface.onStatusChanged(Constants.disLiked, randomUser);
-            randomUser.setLiked(Constants.disLiked);
             notifyDataSetChanged();
         });
         //On Click Listener for the like button
         holder.btnLike.setOnClickListener(view -> {
             onProfileLikeDislikeInterface.onStatusChanged(Constants.liked, randomUser);
-            randomUser.setLiked(Constants.liked);
             notifyDataSetChanged();
         });
     }

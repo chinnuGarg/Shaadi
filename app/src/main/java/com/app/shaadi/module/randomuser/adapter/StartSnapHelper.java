@@ -9,10 +9,16 @@ import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * Class for the StartSnapHelper
+ */
 public class StartSnapHelper extends LinearSnapHelper {
-
+    //Variable to hold the reference for OrientationHelper
     private OrientationHelper mVerticalHelper, mHorizontalHelper;
 
+    /**
+     * Constructor for the class  StartSnapHelper
+     */
     public StartSnapHelper() {
 
     }
@@ -63,20 +69,15 @@ public class StartSnapHelper extends LinearSnapHelper {
 
     private View getStartView(RecyclerView.LayoutManager layoutManager,
                               OrientationHelper helper) {
-
         if (layoutManager instanceof LinearLayoutManager) {
             int firstChild = ((LinearLayoutManager) layoutManager).findFirstVisibleItemPosition();
-
             boolean isLastItem = ((LinearLayoutManager) layoutManager)
                     .findLastCompletelyVisibleItemPosition()
                     == layoutManager.getItemCount() - 1;
-
             if (firstChild == RecyclerView.NO_POSITION || isLastItem) {
                 return null;
             }
-
             View child = layoutManager.findViewByPosition(firstChild);
-
             if (helper.getDecoratedEnd(child) >= helper.getDecoratedMeasurement(child) / 2
                     && helper.getDecoratedEnd(child) > 0) {
                 return child;
@@ -89,7 +90,6 @@ public class StartSnapHelper extends LinearSnapHelper {
                 }
             }
         }
-
         return super.findSnapView(layoutManager);
     }
 

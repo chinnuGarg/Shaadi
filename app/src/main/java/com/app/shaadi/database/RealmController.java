@@ -95,7 +95,6 @@ public class RealmController implements IDataBaseService {
     public void updateProfileStatus(int status, RandomUser randomUser) {
         realm.executeTransaction(realm -> {
             randomUser.setLiked(status);
-            realm.createObject(RandomUser.class);
             realm.insertOrUpdate(randomUser);
         });
     }
