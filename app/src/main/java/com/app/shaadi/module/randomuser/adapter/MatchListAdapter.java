@@ -111,8 +111,8 @@ public class MatchListAdapter extends RecyclerView.Adapter<MatchListAdapter.MyVi
         Glide.with(context)
                 .load(randomUser.getProfileImage())
                 .apply(new RequestOptions().centerCrop().error(R.drawable.user)
-                        .diskCacheStrategy(DiskCacheStrategy.NONE)
-                        .skipMemoryCache(true))
+                        .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                        .skipMemoryCache(false))
                 .into(holder.profileImage);
         //On click Listener for the dislike button
         holder.btnDislike.setOnClickListener(view -> {
